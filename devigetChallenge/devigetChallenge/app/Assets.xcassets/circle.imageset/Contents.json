@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "dry-clean.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "dry-clean (1).png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "dry-clean (2).png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "dry-clean.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {
