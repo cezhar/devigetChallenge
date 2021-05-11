@@ -9,6 +9,6 @@ import Foundation
 
 class Constansts {
     
-    static let top = " https://www.reddit.com/r/subreddit/top.json"
+    static let top = " https://www.reddit.com/top.json"
     
 }
