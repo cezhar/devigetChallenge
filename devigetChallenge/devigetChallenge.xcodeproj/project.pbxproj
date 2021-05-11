@@ -25,6 +25,7 @@
 		0C242C3426450256005716FB /* JSONCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C242C3326450256005716FB /* JSONCodingKey.swift */; };
 		0C242C3826450273005716FB /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C242C3726450273005716FB /* JSONAny.swift */; };
 		0C242C3B26450297005716FB /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C242C3A26450297005716FB /* JSONUtils.swift */; };
+		0C81E14C264A3258007B80D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81E14B264A3258007B80D1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		0C242C3326450256005716FB /* JSONCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodingKey.swift; sourceTree = "<group>"; };
 		0C242C3726450273005716FB /* JSONAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAny.swift; sourceTree = "<group>"; };
 		0C242C3A26450297005716FB /* JSONUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
+		0C81E14B264A3258007B80D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +82,11 @@
 		0C242BF92644DCE7005716FB /* devigetChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0CC92EB42646240800E098C9 /* Controllers */,
 				0C242C3D2645036F005716FB /* JSON */,
 				0C242C112644DE26005716FB /* Models */,
-				0C242BFA2644DCE7005716FB /* AppDelegate.swift */,
-				0C242BFE2644DCE7005716FB /* ViewController.swift */,
-				0C242C002644DCE7005716FB /* Main.storyboard */,
-				0C242C032644DCEA005716FB /* Assets.xcassets */,
-				0C242C052644DCEA005716FB /* LaunchScreen.storyboard */,
-				0C242C082644DCEA005716FB /* Info.plist */,
+				0CC92EB12646229300E098C9 /* app */,
+				0C81E14E264A33D1007B80D1 /* Utils */,
 			);
 			path = devigetChallenge;
 			sourceTree = "<group>";
@@ -117,6 +116,34 @@
 				0C242C3A26450297005716FB /* JSONUtils.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		0C81E14E264A33D1007B80D1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C81E14B264A3258007B80D1 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0CC92EB12646229300E098C9 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				0C242BFA2644DCE7005716FB /* AppDelegate.swift */,
+				0C242C002644DCE7005716FB /* Main.storyboard */,
+				0C242C032644DCEA005716FB /* Assets.xcassets */,
+				0C242C052644DCEA005716FB /* LaunchScreen.storyboard */,
+				0C242C082644DCEA005716FB /* Info.plist */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		0CC92EB42646240800E098C9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C242BFE2644DCE7005716FB /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +223,7 @@
 				0C242C2E2644FB79005716FB /* Kind.swift in Sources */,
 				0C242C132644F311005716FB /* Feed.swift in Sources */,
 				0C242C1C2644FA34005716FB /* Child.swift in Sources */,
+				0C81E14C264A3258007B80D1 /* Constants.swift in Sources */,
 				0C242C3B26450297005716FB /* JSONUtils.swift in Sources */,
 				0C242C3426450256005716FB /* JSONCodingKey.swift in Sources */,
 				0C242C312645020C005716FB /* JSONNull.swift in Sources */,
@@ -352,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9L4ZZF4QBS;
-				INFOPLIST_FILE = devigetChallenge/Info.plist;
+				INFOPLIST_FILE = devigetChallenge/app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9L4ZZF4QBS;
-				INFOPLIST_FILE = devigetChallenge/Info.plist;
+				INFOPLIST_FILE = devigetChallenge/app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
