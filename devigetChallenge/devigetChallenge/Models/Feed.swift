@@ -22,7 +22,7 @@ struct Feed: Codable {
 
 extension Feed {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(Feed.self, from: data)
+        self = try JSONUtils.newJSONDecoder().decode(Feed.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -47,7 +47,7 @@ extension Feed {
     }
 
     func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
+        return try JSONUtils.newJSONEncoder().encode(self)
     }
 
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
