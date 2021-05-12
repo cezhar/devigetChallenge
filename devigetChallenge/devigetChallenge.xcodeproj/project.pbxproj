@@ -84,9 +84,8 @@
 		0C242BF92644DCE7005716FB /* devigetChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				0CC92EB42646240800E098C9 /* Controllers */,
-				0C242C3D2645036F005716FB /* JSON */,
 				0C242C112644DE26005716FB /* Models */,
+				0CC92EB42646240800E098C9 /* Controllers */,
 				0CC92EB12646229300E098C9 /* app */,
 				0C81E14E264A33D1007B80D1 /* Utils */,
 			);
@@ -123,6 +122,7 @@
 		0C81E14E264A33D1007B80D1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0C242C3D2645036F005716FB /* JSON */,
 				0C81E14B264A3258007B80D1 /* Constants.swift */,
 				0C81E151264A349B007B80D1 /* API.swift */,
 			);
