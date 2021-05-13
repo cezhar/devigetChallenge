@@ -30,14 +30,13 @@ class MainVC: UIViewController {
         let alert = UIAlertController(title: "Dismiss", message: "This feed wil be removed from this context", preferredStyle: UIAlertController.Style.alert)
 
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-              print("Handle Ok logic here")
             let tag = sender.tag
             self.feeds.remove(at: tag)
             self.tableView.deleteRows(at: [IndexPath(row: tag, section: 0)], with: .automatic)
         }))
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
-              print("Handle Cancel Logic here")
+              print("bleh")
         }))
 
         present(alert, animated: true, completion: nil)
@@ -61,8 +60,9 @@ class MainVC: UIViewController {
     }
     
     @IBAction func deleteAll(_ sender: Any) {
+        let count = feeds.count
         feeds.removeAll()
-        for i in 0..<feeds.count{
+        for i in 0..<count{
             self.tableView.deleteRows(at: [IndexPath(row: i, section: 0)], with: .automatic)
         }
     }
@@ -70,6 +70,7 @@ class MainVC: UIViewController {
 }
 
 extension MainVC: UITableViewDataSource, UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return feeds.count
     }
@@ -84,7 +85,6 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate{
             return UITableViewCell()
         }
     }
-    
     
 }
 
