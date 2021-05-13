@@ -9,7 +9,7 @@ import Foundation
 // MARK: - Child
 struct Child: Codable {
     let kind: Kind
-    let data: ChildData
+    var data: ChildData
 }
 
 // MARK: Child convenience initializers and mutators
