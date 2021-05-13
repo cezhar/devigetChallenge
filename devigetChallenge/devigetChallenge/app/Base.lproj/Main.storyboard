@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="devigetChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="devigetChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,13 +24,19 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zo4-TF-OWM">
                                 <rect key="frame" x="0.0" y="832" width="414" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Dismiss All">
+                                    <color key="titleColor" red="0.86234482020000003" green="0.46139233730000001" blue="0.063677226030000006" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEb-q7-SIM"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F8N-ht-htj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F8N-ht-htj">
                                 <rect key="frame" x="0.0" y="76.5" width="414" height="755.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="194" id="vki-cY-8Bb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedTVC" rowHeight="194" id="vki-cY-8Bb" customClass="FeedTVC" customModule="devigetChallenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="194"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vki-cY-8Bb" id="XDa-hD-ChF">
@@ -64,7 +70,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s9K-9j-9iZ">
                                                     <rect key="frame" x="10" y="39.5" width="384" height="100"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WGR-EW-9TE">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reddit" translatesAutoresizingMaskIntoConstraints="NO" id="WGR-EW-9TE">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="dnK-0J-QxX"/>
@@ -124,8 +130,22 @@
                                                 <constraint firstItem="s9K-9j-9iZ" firstAttribute="leading" secondItem="Iv7-hF-bPD" secondAttribute="leading" id="uDh-4J-meO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="circle" destination="e8T-En-UFd" id="5qA-Ae-t66"/>
+                                            <outlet property="commentCounter" destination="wz6-Uf-UXU" id="7Ez-MJ-0KV"/>
+                                            <outlet property="detail" destination="gZo-lU-QdF" id="oYd-Hh-jyD"/>
+                                            <outlet property="dismiss" destination="Iv7-hF-bPD" id="53d-LS-bor"/>
+                                            <outlet property="img" destination="WGR-EW-9TE" id="v2j-8W-9Nx"/>
+                                            <outlet property="right" destination="5in-H9-RG2" id="IGk-1G-eAq"/>
+                                            <outlet property="timeAgo" destination="JU6-4O-x4b" id="VYL-SL-dbw"/>
+                                            <outlet property="username" destination="yOW-MF-Mgf" id="xci-ye-BIW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="TxI-G1-YYx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="54e-Pg-G4e"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -144,6 +164,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="F8N-ht-htj" id="b7h-rY-CaV"/>
                         <segue destination="V0V-Pp-rVe" kind="show" identifier="toDetailVC" id="X2S-g5-sBs"/>
                     </connections>
                 </viewController>
@@ -151,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="-204.34782608695653" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailVC-->
         <scene sceneID="ZUZ-Gj-AT5">
             <objects>
-                <viewController id="V0V-Pp-rVe" sceneMemberID="viewController">
+                <viewController id="V0V-Pp-rVe" customClass="DetailVC" customModule="devigetChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C77-K1-2mw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,6 +215,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="idP-a2-kTK"/>
+                    <connections>
+                        <outlet property="detail" destination="eaa-b1-r4T" id="9uW-3g-3Ac"/>
+                        <outlet property="img" destination="410-ac-QmM" id="kft-En-hdB"/>
+                        <outlet property="user" destination="IA0-Fj-jjU" id="zw6-S1-7Km"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NER-fG-jMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
