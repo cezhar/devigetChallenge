@@ -11,7 +11,7 @@ import UIKit
 class API {
     
     class func getTop(completion: @escaping(_ response:Feed?) -> Void){
-        if let url = URL(string: Constansts.top){
+        if let url = URL(string: Constants.top){
             let urlSession = URLSession.shared
             urlSession.dataTask(with: url, completionHandler: {data, response, error in
                 if let d = data{
