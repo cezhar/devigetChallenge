@@ -7,8 +7,9 @@
 
 import Foundation
 
-class Constansts {
+class Constants {
     
     static let top = " https://www.reddit.com/top.json"
-    
+    static let detailVC = "toDateilVC"
+    static let feedTVC = "feedTVC"
 }
