@@ -44,7 +44,7 @@ struct ChildData: Codable {
     let authorFlairText: JSONNull?
     let title: String
     let createdUTC, ups, numComments: Int
-    let visited: Bool
+    var visited: Bool
     let numReports, distinguished: JSONNull?
 
     enum CodingKeys: String, CodingKey {
