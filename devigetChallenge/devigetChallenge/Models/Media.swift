@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: - Media
 struct Media: Codable {
-    let oembed: Oembed
-    let type: String
+    let oembed: Oembed?
+    let type: String?
 }
 
 // MARK: Media convenience initializers and mutators
