@@ -16,15 +16,8 @@ class API {
             urlSession.dataTask(with: url, completionHandler: {data, response, error in
                 if let d = data{
                     do{
-                        let dataStr = String(data: d, encoding: .utf8)
-                        if let str = dataStr{
-                            let dt = try Feed(str, using: .utf8)
-                            completion(dt)
-                        }
-                        else{
-                            print("no string")
-                            completion(nil)
-                        }
+                        let dt = try Feed(data: d)
+                        completion(dt)
                     }catch{
                         print("error: at creating Feed object")
                         completion(nil)
