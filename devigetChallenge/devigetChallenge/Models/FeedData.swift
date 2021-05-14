@@ -13,7 +13,7 @@ struct FeedData: Codable {
     let modhash: String
     let children: [Child]
     let after: String
-    let before: JSONNull?
+    let before: String?
 }
 
 // MARK: FeedData convenience initializers and mutators
@@ -38,7 +38,7 @@ extension FeedData {
         modhash: String? = nil,
         children: [Child]? = nil,
         after: String? = nil,
-        before: JSONNull?? = nil
+        before: String?? = nil
     ) -> FeedData {
         return FeedData(
             modhash: modhash ?? self.modhash,
