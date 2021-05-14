@@ -203,18 +203,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woQ-xt-1M8">
+                                <rect key="frame" x="82" y="153" width="250" height="250"/>
+                                <connections>
+                                    <action selector="go:" destination="V0V-Pp-rVe" eventType="touchUpInside" id="Xeg-yo-GdO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="whb-97-onN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="woQ-xt-1M8" firstAttribute="top" secondItem="410-ac-QmM" secondAttribute="top" id="2V1-Ud-HUu"/>
                             <constraint firstItem="410-ac-QmM" firstAttribute="centerX" secondItem="C77-K1-2mw" secondAttribute="centerX" id="7Z8-Oa-4qS"/>
                             <constraint firstItem="410-ac-QmM" firstAttribute="top" secondItem="IA0-Fj-jjU" secondAttribute="bottom" constant="24" id="B9s-zF-tNt"/>
                             <constraint firstItem="eaa-b1-r4T" firstAttribute="leading" secondItem="whb-97-onN" secondAttribute="leading" constant="20" id="Dvr-gm-vow"/>
                             <constraint firstItem="IA0-Fj-jjU" firstAttribute="top" secondItem="whb-97-onN" secondAttribute="top" constant="20" id="Jb0-DB-FAw"/>
                             <constraint firstItem="IA0-Fj-jjU" firstAttribute="leading" secondItem="whb-97-onN" secondAttribute="leading" constant="20" id="Koc-xg-uGH"/>
                             <constraint firstItem="whb-97-onN" firstAttribute="trailing" secondItem="IA0-Fj-jjU" secondAttribute="trailing" constant="20" id="OhF-rS-JHg"/>
+                            <constraint firstItem="woQ-xt-1M8" firstAttribute="trailing" secondItem="410-ac-QmM" secondAttribute="trailing" id="Vvv-fi-UiU"/>
                             <constraint firstItem="whb-97-onN" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eaa-b1-r4T" secondAttribute="bottom" constant="20" id="bbw-8I-GaQ"/>
                             <constraint firstItem="eaa-b1-r4T" firstAttribute="top" secondItem="410-ac-QmM" secondAttribute="bottom" constant="20" id="h7E-0J-ilR"/>
+                            <constraint firstItem="woQ-xt-1M8" firstAttribute="leading" secondItem="410-ac-QmM" secondAttribute="leading" id="i2X-oG-iK5"/>
+                            <constraint firstItem="woQ-xt-1M8" firstAttribute="bottom" secondItem="410-ac-QmM" secondAttribute="bottom" id="nIz-Nk-tMx"/>
                             <constraint firstItem="whb-97-onN" firstAttribute="trailing" secondItem="eaa-b1-r4T" secondAttribute="trailing" constant="20" id="nJA-8M-3kH"/>
                         </constraints>
                     </view>
