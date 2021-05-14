@@ -10,12 +10,12 @@ import Foundation
 // MARK: - ChildData
 struct ChildData: Codable {
     let domain: String
-    let bannedBy: JSONNull?
+    let bannedBy: String?
     let mediaEmbed: MediaEmbed
     let subreddit: String
     let selftextHTML: String?
     let selftext: String
-    let likes: JSONNull?
+    let likes: String?
     let userReports: [JSONAny]
     let secureMedia: Media?
     let linkFlairText: String?
@@ -23,17 +23,17 @@ struct ChildData: Codable {
     let gilded: Int
     let secureMediaEmbed: MediaEmbed
     let clicked: Bool
-    let reportReasons: JSONNull?
+    let reportReasons: String?
     let author: String
     let media: Media?
     let score: Int
-    let approvedBy: JSONNull?
+    let approvedBy: String?
     let over18, hidden: Bool
     let thumbnail: String
     let subredditID: String
     let edited: Edited
     let linkFlairCSSClass: String?
-    let authorFlairCSSClass: JSONNull?
+    let authorFlairCSSClass: String?
     let downs: Int
     let modReports: [JSONAny]
     let saved, isSelf: Bool
@@ -41,11 +41,11 @@ struct ChildData: Codable {
     let stickied: Bool
     let created: Int
     let url: String
-    let authorFlairText: JSONNull?
+    let authorFlairText: String?
     let title: String
     let createdUTC, ups, numComments: Int
     var visited: Bool
-    let numReports, distinguished: JSONNull?
+    let numReports, distinguished: String?
 
     enum CodingKeys: String, CodingKey {
         case domain
@@ -105,12 +105,12 @@ extension ChildData {
 
     func with(
         domain: String? = nil,
-        bannedBy: JSONNull?? = nil,
+        bannedBy: String?? = nil,
         mediaEmbed: MediaEmbed? = nil,
         subreddit: String? = nil,
         selftextHTML: String?? = nil,
         selftext: String? = nil,
-        likes: JSONNull?? = nil,
+        likes: String?? = nil,
         userReports: [JSONAny]? = nil,
         secureMedia: Media?? = nil,
         linkFlairText: String?? = nil,
@@ -118,18 +118,18 @@ extension ChildData {
         gilded: Int? = nil,
         secureMediaEmbed: MediaEmbed? = nil,
         clicked: Bool? = nil,
-        reportReasons: JSONNull?? = nil,
+        reportReasons: String?? = nil,
         author: String? = nil,
         media: Media?? = nil,
         score: Int? = nil,
-        approvedBy: JSONNull?? = nil,
+        approvedBy: String?? = nil,
         over18: Bool? = nil,
         hidden: Bool? = nil,
         thumbnail: String? = nil,
         subredditID: String? = nil,
         edited: Edited? = nil,
         linkFlairCSSClass: String?? = nil,
-        authorFlairCSSClass: JSONNull?? = nil,
+        authorFlairCSSClass: String?? = nil,
         downs: Int? = nil,
         modReports: [JSONAny]? = nil,
         saved: Bool? = nil,
@@ -139,14 +139,14 @@ extension ChildData {
         stickied: Bool? = nil,
         created: Int? = nil,
         url: String? = nil,
-        authorFlairText: JSONNull?? = nil,
+        authorFlairText: String?? = nil,
         title: String? = nil,
         createdUTC: Int? = nil,
         ups: Int? = nil,
         numComments: Int? = nil,
         visited: Bool? = nil,
-        numReports: JSONNull?? = nil,
-        distinguished: JSONNull?? = nil
+        numReports: String?? = nil,
+        distinguished: String?? = nil
     ) -> ChildData {
         return ChildData(
             domain: domain ?? self.domain,
