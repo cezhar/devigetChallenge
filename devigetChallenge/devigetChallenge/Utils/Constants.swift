@@ -9,7 +9,7 @@ import Foundation
 
 class Constants {
     
-    static let top = " https://www.reddit.com/top.json"
-    static let detailVC = "toDateilVC"
+    static let top = "https://www.reddit.com/top.json"
+    static let detailVC = "toDetailVC"
     static let feedTVC = "feedTVC"
 }
