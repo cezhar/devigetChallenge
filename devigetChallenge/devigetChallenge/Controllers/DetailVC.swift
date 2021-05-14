@@ -19,11 +19,30 @@ class DetailVC: UIViewController {
         super.viewDidLoad()
 
         user.text = childData.author
-        if let image = UIImage.gifImageWithURL(childData.url){
-            img.image = image
+        
+        let imageExtensions = ["png", "jpg", "gif"]
+        //...
+        // Iterate & match the URL objects from your checking results
+        if let url: URL = URL(string: childData.url){
+            let pathExtention = url.pathExtension
+            if imageExtensions.contains(pathExtention)
+            {
+                print("Image URL: \(String(describing: url))")
+                if pathExtention == "gif"{
+                    self.img.image = UIImage.gifImageWithURL(childData.url)
+                }else{
+                    self.img.downloaded(from: self.childData.url)
+                    
+                }
+            }else
+            {
+                self.img.downloaded(from: self.childData.thumbnail)
+            }
         }
+        
+
+        
         detail.text = childData.title
-        // Do any additional setup after loading the view.
     }
     
 
