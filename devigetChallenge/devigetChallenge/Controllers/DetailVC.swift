@@ -15,6 +15,7 @@ class DetailVC: UIViewController {
     
     var childData: ChildData!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,5 +46,10 @@ class DetailVC: UIViewController {
         detail.text = childData.title
     }
     
+    @IBAction func go(_ sender: Any) {
+        if let url = URL(string: childData.url){
+            UIApplication.shared.open(url)
+        }
+    }
 
 }
