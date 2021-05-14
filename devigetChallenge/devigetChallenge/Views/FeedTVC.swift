@@ -19,7 +19,7 @@ class FeedTVC: UITableViewCell {
     @IBOutlet weak var commentCounter: UILabel!
     
     
-    func performViews(childData: ChildData, dismiss:Selector, visit: Selector, row: Int){
+    func performViews(childData: ChildData, target: Any, dismiss:Selector, visit: Selector, row: Int){
         
         self.username.text = childData.author
         self.timeAgo.text = Date(timeIntervalSince1970: TimeInterval(childData.created)).timeAgoDisplay()
@@ -29,9 +29,9 @@ class FeedTVC: UITableViewCell {
         self.detail.text = childData.title
         self.commentCounter.text = "\(childData.numComments) Comments"
         self.circle.isHidden = childData.visited
-        self.dismiss.addTarget(self, action: dismiss, for: .touchUpInside)
+        self.dismiss.addTarget(target, action: dismiss, for: .touchUpInside)
         self.dismiss.tag = row
-        self.right.addTarget(self, action: visit, for: .touchUpInside)
+        self.right.addTarget(target, action: visit, for: .touchUpInside)
         self.right.tag = row
     }
     
